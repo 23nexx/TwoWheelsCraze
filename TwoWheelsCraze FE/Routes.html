@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Routes</title>
+    <link rel="stylesheet" href="routes.css" />
+  </head>
+
+  <body>
+    <!-- Top Navbar -->
+    <div class="top-navbar">
+      <a href="LandPage.html">
+        <img src="IMG_2203-removebg-preview.png" alt="Logo" />
+      </a>
+    </div>
+
+    <!-- Hero Section -->
+    <header>
+      <h1></h1>
+    </header>
+
+    <!-- Quick Navigation -->
+    <nav class="quick-nav">
+      <a href="Routes.html" class="nav-item">Rᴏᴜᴛᴇs</a>
+    </nav>
+
+    <!-- Filter + Routes Section -->
+    <main class="content-wrapper">
+      <section class="filter-container">
+        <button id="filter-button" onclick="toggleFilter()">
+          Selecionar Distrito
+        </button>
+        <nav id="filter-menu" class="hidden">
+          <ul>
+            <li onclick="showRoutes('aveiro')">Aveiro</li>
+            <li onclick="showRoutes('beja')">Beja</li>
+            <li onclick="showRoutes('braga')">Braga</li>
+            <li onclick="showRoutes('braganca')">Bragança</li>
+            <li onclick="showRoutes('casteloBranco')">Castelo Branco</li>
+            <li onclick="showRoutes('coimbra')">Coimbra</li>
+            <li onclick="showRoutes('evora')">Évora</li>
+            <li onclick="showRoutes('faro')">Faro</li>
+            <li onclick="showRoutes('guarda')">Guarda</li>
+            <li onclick="showRoutes('leiria')">Leiria</li>
+            <li onclick="showRoutes('lisboa')">Lisboa</li>
+            <li onclick="showRoutes('portalegre')">Portalegre</li>
+            <li onclick="showRoutes('porto')">Porto</li>
+            <li onclick="showRoutes('santarem')">Santarém</li>
+            <li onclick="showRoutes('setubal')">Setúbal</li>
+            <li onclick="showRoutes('vianaDoCastelo')">Viana do Castelo</li>
+            <li onclick="showRoutes('vilaReal')">Vila Real</li>
+            <li onclick="showRoutes('viseu')">Viseu</li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- Routes Display Area -->
+      <section id="routes-content" class="routes-output"></section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <footer class="bottom-nav">
+      <a href="LandPage.html">Hᴏᴍᴇ</a>
+      <a href="Library.html">Lɪʙʀᴀʀʏ</a>
+      <a href="Routes.html">Rᴏᴜᴛᴇs</a>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="routes.js"></script>
+  </body>
+</html>

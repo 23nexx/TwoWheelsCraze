@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="signUp.css" />
+  </head>
+
+  <body>
+    <!-- Top Navbar -->
+    <div class="search-bar">
+      <a href="landPage.html">
+        <img src="IMG_2203-removebg-preview.png" alt="TwoWheelsCraze Logo" />
+      </a>
+    </div>
+
+    <!-- Sign Up Heading -->
+    <h1 class="signup-heading">Cʀᴇᴀᴛᴇ ᴀɴ Aᴄᴄᴏᴜɴᴛ</h1>
+
+    <!-- Sign Up Form Container -->
+    <div class="signup-container">
+      <form id="signup-form">
+        <!-- Step 1 -->
+        <div class="form-step active">
+          <label for="first-name">First Name</label>
+          <input
+            type="text"
+            id="first-name"
+            name="first-name"
+            placeholder="Enter your first name"
+            required
+          />
+
+          <label for="last-name">Last Name</label>
+          <input
+            type="text"
+            id="last-name"
+            name="last-name"
+            placeholder="Enter your last name"
+            required
+          />
+
+          <div class="button-group right-only">
+            <button type="button" class="signup-button" onclick="nextStep()">
+              Next
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="form-step">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+
+          <label for="password">Create a Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Create a password"
+            required
+          />
+
+          <div class="button-group">
+            <button type="button" class="back-button" onclick="prevStep()">
+              Back
+            </button>
+            <button type="button" class="signup-button" onclick="nextStep()">
+              Next
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="form-step">
+          <label for="dob-day">Date of Birth</label>
+          <div class="dob-container">
+            <select id="dob-day" name="dob-day" required>
+              <option value="" disabled selected>Day</option>
+              <!-- Days 1 to 31 -->
+              <script>
+                for (let i = 1; i <= 31; i++) {
+                  document.write(`<option value="${i}">${i}</option>`);
+                }
+              </script>
+            </select>
+
+            <select id="dob-month" name="dob-month" required>
+              <option value="" disabled selected>Month</option>
+              <option value="1">January</option>
+              <option value="2">February</option>
+              <option value="3">March</option>
+              <option value="4">April</option>
+              <option value="5">May</option>
+              <option value="6">June</option>
+              <option value="7">July</option>
+              <option value="8">August</option>
+              <option value="9">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+
+            <select id="dob-year" name="dob-year" required>
+              <option value="" disabled selected>Year</option>
+              <!-- Years from 1900 to the current year -->
+              <script>
+                const currentYear = new Date().getFullYear();
+                for (let i = currentYear; i >= 1900; i--) {
+                  document.write(`<option value="${i}">${i}</option>`);
+                }
+              </script>
+            </select>
+          </div>
+
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender" required>
+            <option value="" disabled selected>Select your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+
+          <label for="bike">Bike</label>
+          <input
+            type="text"
+            id="bike"
+            name="bike"
+            placeholder="What do you ride?"
+            required
+          />
+
+          <div class="button-group">
+            <button type="button" class="back-button" onclick="prevStep()">
+              Back
+            </button>
+            <button type="submit" class="signup-button">Sign Up</button>
+          </div>
+        </div>
+
+        <!-- Step 4-->
+      </form>
+    </div>
+
+    <!-- Bottom Navbar -->
+    <div class="bottom-nav">
+      <a href="landPage.html">Hᴏᴍᴇ</a>
+    </div>
+
+    <script src="signUp.js"></script>
+  </body>
+</html>

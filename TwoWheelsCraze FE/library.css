@@ -1,0 +1,330 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+  /* Evita o scroll horizontal */
+}
+
+/* Style for the search bar */
+.search-bar {
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.search-bar a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar img {
+  height: 125px;
+  cursor: pointer;
+}
+
+.content-wrapper {
+  padding-top: 60px;
+}
+
+header {
+  background-image: url("P90572475-the-new-bmw-m-1000-rr-10-2024-2248px.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 86vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* Alinha o conteúdo no topo */
+  align-items: center;
+  /* Centraliza o conteúdo horizontalmente */
+  text-align: center;
+  /* Centraliza o texto */
+  color: white;
+  padding: 20px;
+  padding-top: 40px;
+  /* Ajuste o padding-top para mover o título para cima */
+  width: 100%;
+  /* Garante que o cabeçalho ocupe toda a largura */
+  box-sizing: border-box;
+  /* Inclui padding e border no tamanho total */
+  margin: 0;
+  /* Remove qualquer margem */
+}
+
+header h1,
+header p {
+  font-size: 48px;
+  margin: 0;
+  margin-top: 0;
+  /* Remove qualquer margem superior */
+}
+
+.cta-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  /* Centraliza os botões */
+  gap: 20px;
+}
+
+.cta-buttons a {
+  text-decoration: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s;
+}
+
+.cta-buttons a:hover {
+  background-color: #0056b3;
+}
+
+.cta-buttons a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
+  border-radius: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
+.cta-buttons a:hover::after {
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+}
+
+.cta-buttons a span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Navigation Bar */
+.quick-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  background-color: black;
+  width: 100%;
+  height: 80px;
+  padding: 10px 0;
+  margin: 0;
+  /* Remove o espaço extra */
+  box-sizing: border-box;
+  /* Inclui padding e border no tamanho total */
+}
+
+.quick-nav .nav-item {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.quick-nav .nav-item:hover {
+  color: rgb(255, 0, 0);
+}
+
+/* Other page content */
+.content {
+  display: flex;
+  justify-content: center;
+  /* Centers horizontally */
+  align-items: center;
+  /* Centers vertically */
+  height: 220px;
+  /* Makes the content take the full height of the viewport */
+  text-align: center;
+  /* Ensures the text is centered */
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.content h2 {
+  font-size: 50px; /* Sets the font size of the text */
+  margin-bottom: 20px; /* Adds space below the text */
+  display: inline-block; /* Ensures the text behaves like a block for styling */
+  background: linear-gradient(
+    45deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  ); /* Applies a gradient background */
+  background-size: 300% 300%; /* Enlarges the gradient for smooth animation */
+  -webkit-background-clip: text; /* Clips the gradient to the text */
+  -webkit-text-fill-color: transparent; /* Makes the text transparent to show the gradient */
+  animation: gradient-animation 2.4s ease infinite; /* Animates the gradient */
+  position: relative; /* Ensures proper stacking context */
+  transition: transform 0.3s ease; /* Adds a smooth zoom effect on hover */
+}
+.content h2:hover {
+  transform: scale(1.1);
+  /* Slight zoom effect on hover */
+}
+
+/* Gallery Section */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* Ensures 4 images per row */
+  gap: 40px;
+  /* Space between images */
+  padding: 30px;
+  margin: 0 auto;
+  /* Centers the gallery horizontally */
+  max-width: 1400px;
+  /* Increases the maximum width of the gallery */
+  box-sizing: border-box;
+  /* Ensures padding is included in the width */
+  padding-bottom: 100px;
+  /* Adds extra space at the bottom of the gallery */
+}
+
+.gallery-item img {
+  width: 100%;
+  /* Makes the image fill its container */
+  height: 350px;
+  /* Sets a fixed height for the images */
+  object-fit: cover;
+  /* Ensures the image fills the container without distortion */
+  border-radius: 8px;
+  /* Optional: Adds rounded corners */
+  display: block;
+  /* Ensures the image is visible */
+}
+
+.gallery-item img:first-child {
+  display: block;
+  /* Ensures the first image is visible by default */
+}
+
+.gallery-item {
+  position: relative;
+  text-align: center;
+  /* Centraliza o conteúdo dentro do item da galeria */
+}
+
+.gallery-item .follow-button {
+  margin-top: 10px;
+  padding: 10px 27px;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  border: 2px solid black;
+}
+
+.gallery-item .follow-button:hover {
+  background-color: rgba(0, 153, 255, 0.018);
+  border: 2px solid rgb(0, 153, 255);
+  transform: scale(1.1);
+}
+
+.gallery-item {
+  position: relative;
+  /* Necessário para posicionar as setas dentro do item */
+}
+
+.gallery-item .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #ffffff;
+  background-color: transparent;
+  /* Remove o fundo */
+  border: none;
+  /* Remove a borda */
+  cursor: pointer;
+  padding: 0;
+  /* Remove o preenchimento */
+  z-index: 10;
+  /* Garante que as setas fiquem acima das imagens */
+}
+
+.gallery-item .arrow.left {
+  left: 10px;
+  /* Posiciona a seta à esquerda */
+}
+
+.gallery-item .arrow.right {
+  right: 10px;
+  /* Posiciona a seta à direita */
+}
+
+.gallery-item .arrow:hover {
+  color: rgb(255, 0, 0);
+  /* Apenas muda a cor do texto ao passar o mouse */
+}
+
+/* Bottom Navigation Bar */
+.bottom-nav {
+  background-color: rgb(0, 0, 0);
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  /* Certifique-se de que a barra comece do canto esquerdo */
+  width: 100%;
+  box-sizing: border-box;
+  /* Inclui padding e border no tamanho total */
+  z-index: 1000;
+  /* Ensures the bottom navigation bar stays above other elements */
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: white;
+  margin: 0 15px;
+  font-size: 16px;
+  transition: color 0.3s;
+  /* Adiciona transição suave */
+}
+
+.bottom-nav a:hover {
+  color: red;
+  /* Muda a cor para vermelho ao passar o mouse */
+}

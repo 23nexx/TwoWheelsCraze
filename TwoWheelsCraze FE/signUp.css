@@ -1,0 +1,318 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Ensure the content is vertically centered */
+  }
+
+  .search-bar {
+    width: 100%;
+    height: 60px;
+    /* Ensure consistent height */
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    /* Center the logo horizontally */
+    align-items: center;
+    /* Center the logo vertically */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .search-bar img {
+    height: 125px;
+    /* Ensure consistent logo size */
+    cursor: pointer;
+  }
+
+  .signup-heading {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 28px;
+    color: #000000;
+    font-weight: bold;
+  }
+
+  .signup-container {
+    background-color: #ffffff;
+    padding: 80px 30px 40px;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    min-height: 230px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 60px;
+    /* Add consistent spacing from the bottom */
+  }
+
+  .signup-container::before {
+    content: "TᴡᴏWʜᴇᴇʟs Cʀᴀᴢᴇ";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* Full width of the container */
+    height: 40px;
+    /* Height of the black strip */
+    background-color: black;
+    /* Black color for the strip */
+    color: white;
+    /* White text color */
+    font-size: 18px;
+    /* Adjust font size */
+    font-weight: bold;
+    /* Make the text bold */
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 2px;
+    /* Match the container's border radius */
+    z-index: 1;
+    /* Ensure it appears above the container background */
+  }
+
+  .signup-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+  }
+
+  .signup-container input {
+    width: 100%;
+    /* Ensure all fields take up the full width */
+    padding: 4px 8px;
+    /* Reduced padding for a slimmer look */
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    /* Consistent font size */
+    background-color: #ffffff;
+    /* White background */
+    color: #555;
+    /* Text color */
+    appearance: none;
+    /* Remove default browser styling */
+    -webkit-appearance: none;
+    /* Remove default styling for Safari */
+    -moz-appearance: none;
+    /* Remove default styling for Firefox */
+    cursor: pointer;
+    /* Pointer cursor for better UX */
+    position: relative;
+    height: 30px;
+    /* Reduced height for a slimmer look */
+  }
+
+  .signup-container select {
+    width: 100%;
+    /* Ensure all fields take up the full width */
+    padding: 6px 10px;
+    /* Keep padding for the Gender dropdown */
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    /* Consistent font size */
+    background-color: #ffffff;
+    /* White background */
+    color: #555;
+    /* Text color */
+    appearance: none;
+    /* Remove default browser styling */
+    -webkit-appearance: none;
+    /* Remove default styling for Safari */
+    -moz-appearance: none;
+    /* Remove default styling for Firefox */
+    cursor: pointer;
+    /* Pointer cursor for better UX */
+    position: relative;
+    height: 36px;
+    /* Keep the height for the Gender dropdown */
+  }
+
+  /* Focus effects for all input fields and dropdowns */
+  .signup-container input:focus,
+  .signup-container select:focus {
+    border-color: #0099ff;
+    /* Blue border on focus */
+    outline: none;
+    /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(0, 153, 255, 0.5);
+    /* Add a subtle glow */
+  }
+
+  /* Placeholder text color */
+  .signup-container input::placeholder,
+  .signup-container select::placeholder {
+    color: #aaa;
+    /* Placeholder text color */
+  }
+
+  /* Placeholder text color */
+  .signup-container input::placeholder,
+  .signup-container select::placeholder {
+    color: #aaa;
+    /* Placeholder text color */
+  }
+
+  .signup-container select#gender {
+    height: 42px;
+    /* Increased height for the Gender dropdown */
+    width: 120%;
+    /* Increased width for the Gender dropdown */
+    max-width: 104%;
+    /* Prevent it from exceeding the container width */
+  }
+
+  .signup-button,
+  .back-button {
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease,
+      border-color 0.3s ease, color 0.3s ease;
+    margin: 10px 5px;
+  }
+
+  /* Hover effects for the Sign Up button */
+  .signup-button:hover {
+    background-color: rgba(0, 153, 255, 0.1);
+    border-color: #0099ff;
+    color: #0099ff;
+    transform: scale(1.05);
+  }
+
+  /* Back button with red hover effects */
+  .back-button {
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #ffffff;
+    /* White background */
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease,
+      border-color 0.3s ease, color 0.3s ease;
+    margin: 10px 5px;
+  }
+
+  .back-button:hover {
+    background-color: rgba(0, 153, 255, 0.1);
+    /* Light blue background on hover */
+    border-color: #e54242;
+    /* Red border on hover */
+    color: #e54242;
+    /* Red text on hover */
+    transform: scale(1.1);
+    /* Slight zoom effect on hover */
+  }
+
+  .form-step {
+    display: none;
+  }
+
+  .form-step.active {
+    display: block;
+  }
+
+  .bottom-nav {
+    background-color: black;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .bottom-nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+
+  .bottom-nav a:hover {
+    color: red;
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .button-group.right-only {
+    justify-content: flex-end;
+  }
+
+  .button-group.center {
+    justify-content: center;
+    gap: 10px;
+    /* Add spacing between the buttons */
+  }
+
+  .button-group .back-button {
+    padding: 8px 15px;
+    /* Make the Back button smaller */
+    font-size: 14px;
+    /* Reduce font size */
+  }
+
+  .button-group .signup-button {
+    padding: 10px 20px;
+    /* Keep the Sign Up button larger */
+    font-size: 16px;
+    /* Keep font size larger for emphasis */
+    font-weight: bold;
+  }
+
+  .dob-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .dob-container select {
+    width: 30%;
+    /* Adjust width for each dropdown */
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #555;
+    cursor: pointer;
+    height: 36px;
+    /* Match the height of other fields */
+  }
+
+  .dob-container select:focus {
+    border-color: #0099ff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 153, 255, 0.5);
+  }
